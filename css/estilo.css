@@ -1,0 +1,374 @@
+
+/* DEFINICIONES GENERALES */
+
+body{font-family: 'Oswald', sans-serif; margin: 5px;}
+header{font-weight: 300; margin-top: 25px;}
+ul{list-style-type: style type none; justify-items: center;}
+li{padding-left: 15px; padding-right: 15px; border-right: solid 2px black;}
+li{display: inline-block; justify-items: flex-start;}
+li.contacto{border-right: none;}
+a{text-decoration: none; color: black;}
+/*  */
+
+/* A PARTIR DE ACA TRABAJO PARA INDEX.HTML */
+
+
+/* DEFINO EL GRID */
+#gridIndex{
+    display: grid;
+    grid-template-areas: 
+    "encabezado"
+    "imagen"
+    "vacio"
+    "textoindex"
+    "vacio2"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 50px auto 50px auto;
+    row-gap: 25px;
+    justify-items: center;
+    align-items: center;
+}
+/*  */
+
+/* ASIGNO LAS ZONAS */
+.headerIndex{grid-area: encabezado;}
+.imagenIndex{grid-area: imagen;}
+.leyendaIndex{grid-area: textoindex;}
+footer{grid-area: footer;}
+/*  */
+
+/* ESTAS SON ALGUNAS CLASES QUE ME AYUDAN A VISUALIZAR EL GRID Y DAR FORMATO */
+.bg1{background-color: lightgray;}
+.bg2{background-color: lightcoral;}
+.bg3{background-color: lightgreen;} 
+.borde{border: solid 1px gray;}
+.f-w100{font-weight: 100;}
+.f-w200{font-weight: 200;}
+.f-w300{font-weight: 300;}
+.f-s25{ font-size: 25px;}
+.f-w400{font-weight: 400; font-size: 25px;}
+.f-foo{ font-size: small; font-weight: 100; color: grey;}
+.textoindex{font-weight: 300; font-size: 26px; text-align: center;}
+.justi{text-align: justify;}
+/*  */
+
+/* YA NO TRABAJO PARA EL INDEX */
+
+/* A PARTIR DE ACA TRABAJO PARA PAGES */
+/* TRABAJO MOBILE FIRST Y HAGO LA MEDIA QUERY */
+
+/* PARA LA VISTA MOBILE */
+
+
+
+.headerServicios{display: flex;}
+.headerLogo{display: inline-block;}
+.texto9{display: inline-block;}
+div.headerLogo{width: 60px; height: auto;}
+.max{max-width: 100%;}
+
+/* QUERY PARA MOBILE */
+
+@media (max-width:768px) {
+.gridServicios{
+
+    display: grid;
+    grid-template-areas:
+        "a1 a2"
+        "b1 b1"
+        "c1 c1"
+        "d1 d1"
+        "e e"
+        "f f"
+        "g g"
+        "k k"
+        "l l"
+        "h h"
+        "i i"
+        "j j"
+        ;
+    grid-template-columns: 70px auto;
+    grid-auto-rows: auto auto auto auto auto auto auto auto auto;
+    row-gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.headerLogo{ grid-area: a1;}
+.texto9{grid-area: a2;}
+.navG{grid-area: b1;}
+.textotitulo{grid-area: c1; justify-self: left; padding-left: 0px;}
+.textoServicios1{grid-area: d1;margin-left: 10px; margin-right: 10px;}
+.soloDesktop{display: none;}
+.imagenServicios1{grid-area: e; margin-left: 10px;margin-right: 10px;}
+.textoServicios2{grid-area: f; margin-left: 10px; margin-right: 10px;}
+.imagenServicios2{grid-area: g; margin-left: 10px;margin-right: 10px;}
+.textoSeccion3{grid-area: k; margin-left: 10px; margin-right: 10px;}
+.imagenSeccion3{grid-area: l; margin-left: 10px; margin-right: 10px;}
+.logoInstagram{display: inline-block;}
+.rrss{grid-area: h; display: inline;width: 50px; margin-top: 50px;}
+.navGF{grid-area: i;}
+.foo{grid-area: j; margin-top: 20px;}
+.linkIngSoft{color: blue;}
+.textotitulo{display: block; width: 100%;}
+.tituSer{width: 100%;background-color: lightgray; padding-left: 30px;}
+.rrssTexto2{display: none;}
+a{display: inline;}
+div{display: inline;}
+
+/* MODIFICACION PARA DESARROLLOS */
+
+.gridDesarrollos{
+
+    display: grid;
+    grid-template-areas:
+        "a1 a2"
+        "b1 b1"
+        "c1 c1"
+        "d1 d1"
+        "e e"
+        "f f"
+        "g g"
+        "k k"
+        "l l"
+        "h h"
+        "i i"
+        "j j"
+        ;
+    grid-template-columns: 70px auto;
+    grid-auto-rows: auto auto auto auto auto auto auto auto auto;
+    row-gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.textoSeccion1{grid-area: d1;margin-left: 10px; margin-right: 10px;}
+.soloDesktop{display: none;}
+.imagenSeccion1{grid-area: e; margin-left: 10px;margin-right: 10px ;width: 75%;}
+.textoSeccion2{grid-area: f; margin-left: 10px; margin-right: 10px;}
+.imagenSeccion2{grid-area: g; margin-left: 10px; margin: right 10px;width: 75%;}
+.textoSeccion3{grid-area: k; margin-left: 10px; margin-right: 10px;}
+.imagenSeccion3{grid-area: l; margin-left: 10px; margin-right: 10px; width: 75%;}
+
+
+/* MODIFICACION PARA CONTACTO */
+
+.gridContacto{
+
+    display: grid;
+    grid-template-areas:
+        "a1 a2"
+        "b1 b1"
+        "c1 c1"
+        "d1 d1"
+        "e e"
+        "f f"
+        "g g"
+        "h h"
+        "i i"
+        "j j"
+        ;
+    grid-template-columns: 70px auto;
+    grid-auto-rows: auto auto auto auto auto auto auto auto auto;
+    row-gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.textoContacto1{grid-area: d1;margin-left: 10px; margin-right: 10px;}
+.imagenContacto1{grid-area: e; margin-left: 10px;margin-right: 10px ;width: 75%;}
+.imagenContacto2{grid-area: f; margin-left: 10px; margin-right: 10px;}
+
+.logoInstagram{display: inline-block;}
+.rrss{grid-area: h; display: inline;width: 50px; margin-top: 50px;}
+.navGF{grid-area: i;}
+.foo{grid-area: j; margin-top: 20px;}
+.linkIngSoft{color: blue;}
+.textotitulo{display: block; width: 100%;}
+.tituSer{width: 100%;background-color: lightgray; padding-left: 30px;}
+.rrssTexto2{display: none;}
+a{display: inline;}
+div{display: inline;}
+form li{display: block;}
+
+}
+
+
+/* HASTA ACA FUE EL MOBILE */
+/* ACA INICIA LA MEDIA QUERIE PARA DESKTOP */
+
+@media (min-width:1024px) {
+    
+
+    .gridServicios{
+
+        display: grid;
+        grid-template-areas:
+            "a1 a3 a3 a3"
+            "b b b b"
+            "c1 c1 c2 c2"
+            "d1 d1 d2 d2"
+            "e1 e1 e2 e2"
+            "f f f f"
+            "g g g g"
+            "h h h h"
+           
+            ;
+        grid-template-columns: 220px auto 25% 25%;
+        grid-auto-rows: auto auto auto auto auto auto auto auto auto;
+        row-gap: 15px;
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    .headerLogo{ grid-area: a1; justify-self: left; margin-left: 50px;}
+    .texto9{grid-area: a1;justify-self: left; font-size: 16px; width: 100px; margin-left: 120px;}
+    .navG{grid-area: a3; font-size: 20px;}
+    .textotitulo{grid-area: b; justify-self: left; padding-left: 30px;}
+    .textoServicios1{grid-area: c2; margin-left: 10px; margin-right: 10px;}
+    .soloDesktop{display: contents;}
+    .imagenServicios1{grid-area: c1;margin-left: 10px; margin-right: 10px;}
+    .textoServicios2{grid-area: d2;margin-left: 10px; margin-right: 10px;}
+    .imagenServicios2{grid-area: d1;margin-left: 10px; margin-right: 10px;}
+    .textoSeccion3{grid-area: e2; margin-left: 10px; margin-right: 10px;}
+    .imagenSeccion3{grid-area: e1; margin-left: 10px; margin-right: 10px;}
+
+    /* modificaciones por cambio de estructura de DESARROLLOS */
+    .gridDesarrollos{
+
+        display: grid;
+
+        grid-template-areas: 
+        "a1 a3 a3 a3"
+        "b b b b"
+        "c1 c c c"
+        "d1 d2 d2 d2"
+        "e1 e2 e2 e2"
+        "f f f f"
+        "g g g g"
+        "h h h h"
+        
+        ;
+
+        grid-template-columns: 220px auto 25% 25%;
+        grid-auto-rows: auto auto auto auto auto auto auto auto auto;
+        row-gap: 15px;
+        justify-items: center;
+        align-items: center;
+
+
+
+    }
+
+
+    .headerLogo{ grid-area: a1; justify-self: left; margin-left: 50px;}
+    .texto9{grid-area: a1;justify-self: left; font-size: 16px; width: 100px; margin-left: 120px;}
+    .navG{grid-area: a3; font-size: 20px;}
+    .textotitulo{grid-area: b; justify-self: left; padding-left: 30px;}
+    .textoSeccion1{grid-area: c; margin-left: 10px; margin-right: 10px;}
+    .soloDesktop{display: contents;}
+    .imagenSeccion1{grid-area: c1;margin-left: 10px; margin-right: 10px;}
+    .textoSeccion2{grid-area: d2;margin-left: 10px; margin-right: 10px;}
+    .imagenSeccion2{grid-area: d1;margin-left: 10px; margin-right: 10px;}
+    .textoSeccion3{grid-area: e2; margin-left: 10px; margin-right: 10px;}
+    .imagenSeccion3{grid-area: e1; margin-left: 10px; margin-right: 10px;}
+
+
+
+    
+    .rrss{grid-area: f; /*width: 50px;margin-top: 100px;*/}
+    .logoInstagram{display: block; width: 80px; margin-top: 100px;justify-items: center; display: inline-block;}
+    .logoTwitter{width: 75px}
+    .rrssTexto{text-align: center;}
+    .navGF{display: none;}
+    .rrssTexto2{grid-area: g;}
+    .foo{grid-area: h; margin-top: 20px;}
+    .justi{font-size: 20px;}
+    .textotitulo{width: 100%;}
+    .tituSer{width: 100%; background-color: lightgray;}
+    li{padding-left: 50px; padding-right: 50px;}
+
+    /* MODIFICACION CAMBIO ESTRUCTURA EN CONTACTO */
+
+    .gridContacto{
+
+        display: grid;
+
+        grid-template-areas: 
+        "a1 a3 a3 a3"
+        "b b b b"
+        "c c c c"
+        "d1 d1 d2 d2"
+        "e1 e2 e2 e2"
+        "f f f f"
+        "g g g g"
+        "h h h h"
+        
+        ;
+
+        grid-template-columns: 220px auto 25% 25%;
+        grid-auto-rows: auto auto auto auto auto auto auto auto auto;
+        row-gap: 15px;
+        justify-items: center;
+        align-items: center;
+
+
+
+    }
+
+
+    .headerLogo{ grid-area: a1; justify-self: left; margin-left: 50px;}
+    .texto9{grid-area: a1;justify-self: left; font-size: 16px; width: 100px; margin-left: 120px;}
+    .navG{grid-area: a3; font-size: 20px;}
+    .textotitulo{grid-area: b; justify-self: left; padding-left: 30px;}
+    .textoContacto1{grid-area: c; margin-left: 10px; margin-right: 10px;}
+    .imagenContacto1{grid-area: d1;margin-left: 10px; margin-right: 10px;}
+    .imagenContacto2{grid-area: d2;margin-left: 10px; margin-right: 10px;}
+    
+
+}
+
+/* formateo del formulario */
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: rgb(86, 177, 208);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #595ea2;
+  }
